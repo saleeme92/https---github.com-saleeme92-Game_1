@@ -1,0 +1,98 @@
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #4be5d8e8;
+    font-size: 24px; 
+    perspective: 1000px;
+    line-height: 1.6;
+    color: #a92929;
+    text-align: center;
+}
+#game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform-style: preserve-3d;
+    font-size: 2em;
+    font-weight: 600;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 150px);
+    grid-template-rows: repeat(3, 150px);
+    gap: 5px;
+    margin: 30px auto;
+    transform: rotateX(35deg) rotateY(-20deg);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    background: linear-gradient(145deg, #81ec2f, #8fef2f);
+    transition: transform 0.5s;
+}
+
+.square {
+    width: 150px;
+    height: 150px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 54px;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.2);
+    transition: transform 0.5s;
+}
+.square:hover {
+    transform: translateY(-10px);
+}
+
+button {
+    margin-top: 30px;
+    padding: 20px 30px;
+    font-size: 50px; 
+    cursor: pointer;
+    border-radius: 60px;
+    box-shadow: 0 15px 25px rgba(0,0,0,0.7);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    color: white;
+    border: none;
+    transition: all 0.5s ease;
+    text-shadow: 2px 2px 4px #000000;
+}
+button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 20px 30px rgba(0,0,0,0.7);
+}
+
+#result {
+    margin-top: 30px;
+    font-size: 50px;
+    color: green;
+    text-shadow: 0px 0px 10px #00ff00;
+    animation: celebration 2s infinite;
+}
+
+@keyframes celebration {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2) rotate(20deg); }
+    100% { transform: scale(1); }
+}
+
+.square.X {
+    color: rgb(255, 0, 0);
+    text-shadow: 0px 0px 5px rgb(255, 0, 0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1em rgba(255, 0, 0, 0.982);
+}
+
+.square.O {
+    color: rgb(0, 47, 255);
+    text-shadow: 0px 0px 5px rgb(4, 20, 246);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1em rgba(3, 23, 243, 0.5);
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html> <!-- Defines the document type and version of HTML -->
+<html lang="en"> <!-- Defines the language of the document -->
+<head> <!-- Contains meta information about the document -->
+    <meta charset="UTF-8"> <!-- Defines the character set for the document -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Makes the webpage responsive -->
+    <title>Tic-Tac-Toe</title> <!-- Defines the title of the document -->
+    <link rel="stylesheet" href="style.css"> <!-- Links the CSS file for styling -->
+</head>
+<body> <!-- Contains the content of the document -->
+    <div id="game"> <!-- Main game container -->
+        <div id="instructions">1- Choose your player (X or O) when prompted.
+            2- Click on a square to make a move. 
+              The game alternates turns between you and the computer
+            Rules is => :(You have 30 seconds to make each move) , If the timer runs out, the other player wins ,
+             The game declares a winner if a player gets three of their marks in a horizontal, vertical, or diagonal row
+             , Click the "New Game" button to restart the game at any time.</div> <!-- Game instructions -->
+        <div id="countdown"></div> <!-- Countdown timer display -->
+        <div id="board" class="board"> <!-- Game board container -->
+            <div class="square" data-square-index="0"></div> <!-- Game square 0 -->
+            <div class="square" data-square-index="1"></div> <!-- Game square 1 -->
+            <div class="square" data-square-index="2"></div> <!-- Game square 2 -->
+            <div class="square" data-square-index="3"></div> <!-- Game square 3 -->
+            <div class="square" data-square-index="4"></div> <!-- Game square 4 -->
+            <div class="square" data-square-index="5"></div> <!-- Game square 5 -->
+            <div class="square" data-square-index="6"></div> <!-- Game square 6 -->
+            <div class="square" data-square-index="7"></div> <!-- Game square 7 -->
+            <div class="square" data-square-index="8"></div> <!-- Game square 8 -->
+        </div>
+        <button id="newGameButton">New Game</button> <!-- New game button -->
+        <div id="result"></div> <!-- Game result display -->
+        <div id="score"></div> <!-- Score display -->
+        
+    </div>
+    <script src="script.js"></script> <!-- Links the JavaScript file for game logic -->
+</body>
+</html>
+
